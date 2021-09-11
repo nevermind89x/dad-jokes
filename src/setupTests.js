@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import { configure } from 'enzyme';
+
+// For now the unofficial enzyme adapter for React 17
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import 'jest-styled-components';
+configure({ adapter: new Adapter() });
